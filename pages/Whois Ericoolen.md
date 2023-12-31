@@ -14,7 +14,8 @@
 		- Master level compiler construction teaching assistant
 	- **Rhythmo**: *Software Developer Internship, 2021.09-2022.06*
 		- All platform real-time full body motion capture and live streaming system
-	- **Netease Games**: *Software
+	- **Netease Games**: *Software Engineer Internship, 2021.06-2021.09*
+		- Serialization and analyzing library for Unity Shaderlab with extra functionalities.
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

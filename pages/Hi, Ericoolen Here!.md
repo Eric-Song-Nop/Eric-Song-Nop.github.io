@@ -1,6 +1,6 @@
 title:: Hi, Ericoolen Here!
 
-- ## Shortcuts you might want
+- ## Shortcuts for Logseq you might want on this page
 	- `t`+`t`: toggle dark mode
 	- `t`+`d`: toggle bullet points
 	- `t`+`w`: wider mode

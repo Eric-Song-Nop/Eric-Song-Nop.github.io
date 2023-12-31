@@ -1,4 +1,5 @@
 ## Contact
+	- GMail: EricYFSong
 	-
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_

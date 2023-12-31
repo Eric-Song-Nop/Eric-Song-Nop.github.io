@@ -1,1 +1,1 @@
-- Current a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write **Safe**, **Clean**, and **Correct** code. I believe in all coding patterns and tools that enables software developing to efficiently write clean code without much hack and intelligence.
+- 我目前在荷兰攻读计算机科学硕士学位，对所有能帮助程序员编写*安全*、*清晰*和*正确*代码的工具技术感兴趣。我相信所有编码模式和工具，可以使软件开发人员高效地编写干净的代码，而不需要太多的技巧和智慧。

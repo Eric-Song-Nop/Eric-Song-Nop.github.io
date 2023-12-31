@@ -1,6 +1,7 @@
-- Current a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write **Safe**, **Clean**, and **Correct** code. I believe in all coding tech and tools that enables software developing to
+- Current a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write **Safe**, **Clean**, and **Correct** code. I believe in all coding patterns and tools that enables software developing to efficiently write clean code without much hack and intelligence.
 	- ### Contact
 		- GMail: *EricYFSong* at the address you know
+		- GitHub: **
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

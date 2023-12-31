@@ -1,0 +1,1 @@
+- [[Palindrome Rearrangement Queries](https://leetcode.cn/problems/palindrome-rearrangement-queries/)]]

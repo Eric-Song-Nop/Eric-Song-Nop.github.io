@@ -1,4 +1,4 @@
-- Current a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write *Safe*, *Clean*, and **
+- Current a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write **Safe**, **Clean**, and **Correct** code. I believe in all coding tech and tools that enables software developing to
 	- ### Contact
 		- GMail: *EricYFSong* at the address you know
 - ## Education

@@ -5,4 +5,5 @@
 		- GitHub: *[你知道的](https://www.github.com/Eric-Song-Nop)*
 			- **请不要使用我的GitHub Avatar，我并不拥有这个形象的版权**
 		- Linkedin: **[给孩子一个工作吧球球了](https://www.linkedin.com/in/yifan-song-938b79235/)**
--
+- ## 教育经历
+	- 代尔夫特理工大学

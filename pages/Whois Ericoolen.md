@@ -1,5 +1,5 @@
 -
 - ## Education
-	- **TUDelft**, MSc, Computer Science
-	- **Shanghaitech University**
+	- **TUDelft**, MSc, Computer Science, _2022-2024_
+	- **Shanghaitech University**, BSc, Computer Science
 	-

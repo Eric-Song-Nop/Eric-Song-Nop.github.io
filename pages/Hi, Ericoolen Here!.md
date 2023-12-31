@@ -4,5 +4,5 @@ title:: Hi, Ericoolen Here!
 	- `t`+`t`: toggle dark mode
 	- `t`+`d`: toggle bullet points
 	- `t`+`w`: wider mode
-- [[Whois Ericoolen]]
+- {{embed [[Whois Ericoolen]]}}
 -

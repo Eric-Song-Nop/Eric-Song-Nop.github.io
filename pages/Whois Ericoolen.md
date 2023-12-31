@@ -9,7 +9,8 @@
 	- **Jetbrains**: *Software Developer Internship*, *2024.02-TBD*
 	  id:: 6591d2f8-6afe-4b65-bee4-9ac063f2e1b9
 	- **TUDelft**: *Research Assistant*, *2023.09-2024.01*
-		- Fence Synthesis for Weak Memory Robustness(Formal name )
+		- Fence Synthesis for Weak Memory Robustness(Formal name to be determined)
+	- **TUDelft**: *Research Assistant*, *2023.09-202*
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

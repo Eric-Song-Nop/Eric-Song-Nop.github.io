@@ -12,7 +12,9 @@
 		- Fence Synthesis for Weak Memory Robustness(Formal name to be determined)
 	- **TUDelft**: *Teaching Assistant*, *2023.09-2023.12*
 		- Master level compiler construction teaching assistant
-	- **Rhythmo**: **
+	- **Rhythmo**: *Software Developer Internship, 2021.09-2022.06*
+		- All platform real-time full body motion capture and live streaming system
+	- **Netease Games**: *Software
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

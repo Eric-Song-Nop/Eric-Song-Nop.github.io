@@ -1,3 +1,3 @@
-- Home
-  title:: Home
+title:: Home
+
 -

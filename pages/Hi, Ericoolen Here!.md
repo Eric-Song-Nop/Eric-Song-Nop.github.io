@@ -6,4 +6,5 @@ title:: Hi, Ericoolen Here!
 	- `t`+`w`: wider mode
 - {{embed [[Whois Ericoolen]]}}
 - {{embed [[Ericoolen 是谁]]}}
+- {{query (page-tags Leetcode)}}
 -

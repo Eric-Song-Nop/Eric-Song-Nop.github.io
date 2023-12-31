@@ -17,6 +17,6 @@
 		- All platform real-time full body motion capture and live streaming system
 	- **Netease Games**: *Software Engineer Internship, 2021.06-2021.09*
 		- Serialization and analyzing library for Unity Shaderlab with extra functionalities.
-- ## Education
+- ## Education Experience
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

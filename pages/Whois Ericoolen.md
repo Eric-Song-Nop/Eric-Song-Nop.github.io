@@ -4,7 +4,6 @@
 		- GitHub: *[You already know it](https://www.github.com/Eric-Song-Nop)*
 			- **DON'T USE MY GITHUB AVATAR, I DON'T OWN IT**
 		- Linkedin: **[HIRE ME](https://www.linkedin.com/in/yifan-song-938b79235/)**
-		-
 - ## Education
 	- **TUDelft**, MSc, Computer Science, _2022-2024_
 	- **Shanghaitech University**, BSc, Computer Science, _2018-2022_

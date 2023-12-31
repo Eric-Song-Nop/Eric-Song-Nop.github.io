@@ -5,4 +5,5 @@ title:: Hi, Ericoolen Here!
 	- `t`+`d`: toggle bullet points
 	- `t`+`w`: wider mode
 - {{embed [[Whois Ericoolen]]}}
+- {{embed [[Ericoolen 是谁]]}}
 -

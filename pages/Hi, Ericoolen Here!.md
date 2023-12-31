@@ -5,4 +5,4 @@ title:: Hi, Ericoolen Here!
 	- `t`+`d`: toggle bullet points
 	- `t`+`w`: wider mode
 - [[Whois Ericoolen]]
-- {{query }}
+-

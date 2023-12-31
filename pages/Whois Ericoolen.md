@@ -1,4 +1,5 @@
 -
 - ## Education
+	- **TUDelft**, MSc, Computer Science
 	- **Shanghaitech University**
 	-

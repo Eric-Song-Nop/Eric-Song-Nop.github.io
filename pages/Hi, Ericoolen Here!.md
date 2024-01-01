@@ -4,7 +4,7 @@ title:: Hi, Ericoolen Here!
 	- `t`+`t`: toggle dark mode
 	- `t`+`d`: toggle bullet points
 	- `t`+`w`: wider mode
-- {{embed [[Whois Ericoolen]]}}
+		- {{embed [[Whois Ericoolen]]}}
 - {{embed [[Ericoolen 是谁]]}}
 - {{query (page-tags Leetcode)}}
 -

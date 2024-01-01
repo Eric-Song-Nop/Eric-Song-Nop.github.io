@@ -1,6 +1,7 @@
 - [中文版](Ericoolen 是谁)
 - Currently a computer science master student in the Netherlands, interested in all tooling techniques that help coders to write **Safe**, **Clean**, and **Correct** code. I believe in all coding patterns and tools that enables software developing to efficiently write clean code without much hack and intelligence.
 	- ### Contact
+	  collapsed:: true
 		- GMail: *EricYFSong* at the address you know
 		- GitHub: *[You already know it](https://www.github.com/Eric-Song-Nop)*
 			- **DON'T USE MY GITHUB AVATAR, I DON'T OWN IT**

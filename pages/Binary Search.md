@@ -19,4 +19,4 @@
 	    return l;
 	  }
 	  ```
-	- What important is what out of the range. The condition for the while loop controls
+	- What important is what out of the range. The condition for the while loop controls which element we want

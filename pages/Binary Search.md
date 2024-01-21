@@ -19,4 +19,4 @@
 	    return l;
 	  }
 	  ```
-	- What important is what out of the range,
+	- What important is what out of the range.

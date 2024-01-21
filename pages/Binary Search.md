@@ -1,7 +1,7 @@
 - Basic binary search template
 	- ```cpp
 	  // Lower bound
-	  int lb(vector<int> &nums, int target)
+	  int lowerBound(vector<int> &nums, int target)
 	  {
 	    // we want forall i
 	    // i <= l - 1: nums[i] < target
@@ -19,4 +19,4 @@
 	    return l;
 	  }
 	  ```
-- ##
+	- What important is what out of the range,

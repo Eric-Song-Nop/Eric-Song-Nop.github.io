@@ -1,4 +1,4 @@
-- Outer loop iterate the left bound, inner loop iterate the right bound
+- Outer loop iterate the left bound, inner loop iterate the right bound, thus we have an $O(n)
 - ```cpp
   int group(vector<int> &nums)
   {

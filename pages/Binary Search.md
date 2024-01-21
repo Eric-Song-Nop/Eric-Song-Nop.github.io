@@ -1,21 +1,22 @@
 - Basic binary search template
 	- ```cpp
-	  int binarySearch(vector<int>& nums, int target)
+	  // Lower bound
+	  int lb(vector<int> &nums, int target)
 	  {
-	    int l = 0 , r = nums.size() - 1;
-	    while(l + 1< r)
+	    // we want forall i
+	    // i <= l - 1: nums[i] < target
+	    // i >= r + 1: nums[i] >= target
+	    int l = 0, r = nums.size() - 1;
+	    while (l <= r)
 	    {
 	      int mid = (l + r) / 2;
-	      if(nums[mid] < target)
-	        l = mid;
-	  	else
-	        r = mid;
+	      if (nums[mid] < target)
+	        l = mid + 1;
+	      else // nums[mid] >= target
+	        r = mid - 1;
 	    }
-	    // You will have two element left, check them one more time
-	    if(nums[l] == target)
-	      return l;
-	    if(nums[r] == target)
-	      return r;
-	    return -1;
+	  
+	    return l;
 	  }
 	  ```
+- ##

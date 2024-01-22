@@ -24,3 +24,5 @@
 	  ```
 - ## Recursive DFS
 	- {{embed [[Maximum Depth of Binary Tree]]}}
+	- {{embed [[Leaf Similar Trees]]}}
+-

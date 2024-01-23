@@ -1,7 +1,7 @@
 tags:: #[[Basic Kotlin]]
 
 - Type cast is so common in OO languages but also a common cause of errors. While Kotlin provides you with an automated way of doing safe type checking and casting.
-- Type Checking and Smart Cast Using `is`
+- ## Type Checking and Smart Cast Using `is`
 	- ```kotlin
 	  fun demo(x: Any) {
 	      if (x is String) {

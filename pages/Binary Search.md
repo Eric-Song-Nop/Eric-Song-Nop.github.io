@@ -1,3 +1,5 @@
+tags:: #[[Algorithms for Interview]]
+
 - [灵神题单](https://leetcode.cn/circle/discuss/SqopEo/)
 - Basic binary search template
 	- ```cpp

@@ -17,7 +17,12 @@ tags:: #[[Basic Kotlin]]
 		      is IntArray -> print(x.sum())
 		  }
 		  ```
--
+- ## Smart Cast Works for:
+	- `val local variable`
+	- `val properties`
+	- `var local variable`
+	- `var properties`: never
+	-
 -
 - ## References
 - [Kotlin official document for type checks and casts](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)

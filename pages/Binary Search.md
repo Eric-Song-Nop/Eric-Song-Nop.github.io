@@ -1,3 +1,4 @@
+- [灵神题单](https://leetcode.cn/circle/discuss/SqopEo/)
 - Basic binary search template
 	- ```cpp
 	  // Lower bound

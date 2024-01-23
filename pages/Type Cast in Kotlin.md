@@ -4,4 +4,4 @@ tags:: #[[Basic Kotlin]]
 -
 - ## References
 - [Kotlin official document for type checks and casts](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
--
+- [Dave Leed's video on smart cast]({{video https://youtu.be/LFmF6kuYItc?si=dAuTTUbApsmlshfy}})

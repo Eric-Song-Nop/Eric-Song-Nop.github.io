@@ -9,8 +9,16 @@ tags:: #[[Basic Kotlin]]
 	      }
 	  }
 	  ```
-	- Same technique is used widely for pattern matching is Kotlin
-	-
+	- Same technique is used widely for pattern matching in Kotlin
+		- ```kotlin
+		  when (x) {
+		      is Int -> print(x + 1)
+		      is String -> print(x.length + 1)
+		      is IntArray -> print(x.sum())
+		  }
+		  ```
+-
+-
 - ## References
 - [Kotlin official document for type checks and casts](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
 - [Dave Leed's video on smart cast](https://youtu.be/LFmF6kuYItc?si=dAuTTUbApsmlshfy)

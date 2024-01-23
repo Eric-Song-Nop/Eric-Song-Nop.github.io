@@ -28,9 +28,10 @@ tags:: #[[Basic Kotlin]]
 		  val x: String? = y as? String
 		  ```
 	- Safe:
-		- ```kot
+		- ```kotlin
 		  val x: String? = y as? String
 		  ```
+- ## Use Contract
 - ## References
 - [Kotlin official document for type checks and casts](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
 - [Dave Leed's video on smart cast](https://youtu.be/LFmF6kuYItc?si=dAuTTUbApsmlshfy)

@@ -31,7 +31,8 @@ tags:: #[[Basic Kotlin]]
 		- ```kotlin
 		  val x: String? = y as? String
 		  ```
-- ## Use Contract
+- ## Use Contract to Boost Smart Cast
+	- It is useful to use [[Kotlin Contract]] to enhance the functionality of smart cast, as it usually implies so `is` inside.
 - ## References
 - [Kotlin official document for type checks and casts](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
 - [Dave Leed's video on smart cast](https://youtu.be/LFmF6kuYItc?si=dAuTTUbApsmlshfy)

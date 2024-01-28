@@ -5,4 +5,4 @@ tags:: #[[c++ std]]
 	- ```cpp
 	  sort(vec.begin(), vec.end(), [](auto& a, auto& b){return a[0] < b[0];})`
 	  ```
-	- This also suggest that `less` give
+	- This also suggest that `less` gives an increasing sort.

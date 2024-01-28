@@ -21,52 +21,103 @@ tags:: #Leetcode #[[Algorithms for Interview]]
 		  ```
 	- ### Adjacent List
 		- More Sparse when $E$ close to $V$
+		- ```cpp
+		  using PTT = pair<int, int>;        
+		  // Init Adjacency List
+		  vector<vector<PII>> edges(n);
+		  // Fill Adjacency List
+		  for (auto &time : times)
+		    edges[time[0] - 1].emplace_back(time[1] - 1, time[2]);
+		  ```
 - ## Shortest Path Algorithms
 	- ### Dijkstra
 		- Find the shortest path from one node to all other nodes
 			- #### With matrix
-			- $O(n^2)$
-			- ```cpp
-			  // Dijkstra P743
-			  // Dist from k to j is INF
-			  vector<int> dist(n, INT_MAX);
-			  // Dist from k to k is 0
-			  dist[k - 1] = 0;
-			  
-			  // Visited
-			  unordered_set<int> visited;
-			  
-			  // Iterate n times
-			  for (int i = 0; i < n; i++)
-			  {
-			    // Find the min distance node that is not visited
-			    int minDist = INT_MAX;
-			    int nextNode = -1;
-			    for (int j = 0; j < n; j++)
-			    {
-			      if (visited.count(j) == 0 && dist[j] < minDist)
-			      {
-			        minDist = dist[j];
-			        nextNode = j;
-			      }
-			    }
-			  
-			    // No nextNode found
-			    if (nextNode == -1)
-			      break;
-			  
-			    visited.insert(nextNode);
-			  
-			    // Update the distance of neighbors of nextNode
-			    for (int j = 0; j < n; j++)
-			    {
-			      // Avoid overflow
-			      if (graph[nextNode][j] != INT_MAX)
-			        dist[j] = min(dist[j], dist[nextNode] + graph[nextNode][j]);
-			    }
-			  }
-			  ```
-		-
+				- $O(n^2)$
+				- ```cpp
+				  // Dijkstra P743
+				  // Dist from k to j is INF
+				  vector<int> dist(n, INT_MAX);
+				  // Dist from k to k is 0
+				  dist[k - 1] = 0;
+				  
+				  // Visited
+				  unordered_set<int> visited;
+				  
+				  // Iterate n times
+				  for (int i = 0; i < n; i++)
+				  {
+				    // Find the min distance node that is not visited
+				    int minDist = INT_MAX;
+				    int nextNode = -1;
+				    for (int j = 0; j < n; j++)
+				    {
+				      if (visited.count(j) == 0 && dist[j] < minDist)
+				      {
+				        minDist = dist[j];
+				        nextNode = j;
+				      }
+				    }
+				  
+				    // No nextNode found
+				    if (nextNode == -1)
+				      break;
+				  
+				    visited.insert(nextNode);
+				  
+				    // Update the distance of neighbors of nextNode
+				    for (int j = 0; j < n; j++)
+				    {
+				      // Avoid overflow
+				      if (graph[nextNode][j] != INT_MAX)
+				        dist[j] = min(dist[j], dist[nextNode] + graph[nextNode][j]);
+				    }
+				  }
+				  ```
+			- #### With List
+				- $O(m * log(n))$
+				- ```cpp
+				  // Dijkstra
+				  // Priority Queue: {Distance, Node}
+				  priority_queue<PII, vector<PII>, greater<PII>> pq;
+				  pq.emplace(0, k - 1);
+				  
+				  // Visited
+				  unordered_set<int> visited;
+				  
+				  int ans = 0;
+				  
+				  while (!pq.empty())
+				  {
+				    auto [dist, node] = pq.top();
+				    if (visited.count(node))
+				    {
+				      pq.pop();
+				      continue;
+				    }
+				  
+				    cout << "Node: " << node << " Dist: " << dist << endl;
+				  
+				    // Update Visited
+				    visited.insert(node);
+				  
+				    // Update Ans
+				    ans = max(ans, dist);
+				  
+				    // Update Distance
+				    // Get all neighbors of node
+				    for (auto &[next, d] : edges[node])
+				    {
+				      if (visited.find(next) == visited.end())
+				        pq.emplace(dist + d, next);
+				    }
+				  }
+				  
+				  if (visited.size() != n)
+				    return -1;
+				  
+				  return ans;
+				  ```
 - ## DFS
 	- ```cpp
 	  unordered_set<T> visited;

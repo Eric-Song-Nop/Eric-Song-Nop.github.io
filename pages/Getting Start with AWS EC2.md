@@ -11,4 +11,4 @@ tags:: #AWS #DevOps
 		      User ubuntu
 		  ```
 	- ### For smart Kitty users
-		- Connect with `kitten ssh $Host`
+		- Connect with `kitten ssh $Host` for best experience

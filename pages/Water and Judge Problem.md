@@ -1,5 +1,6 @@
 tags:: #Leetcode #Graph #[[Math Theorems for Leetcode]]
 
+- https://leetcode.cn/problems/water-and-jug-problem/submissions/
 - ## Traversal Graph
 	- Take the remained water in each bottle as a node in the graph
 - ## Math

@@ -76,6 +76,7 @@ tags:: #Leetcode #[[Algorithms for Interview]]
 				  ```
 			- #### With List
 				- $O(m * log(n))$
+				- Remember how we create a [[C++ Min and Max Heap]].
 				- ```cpp
 				  // Dijkstra
 				  // Priority Queue: {Distance, Node}

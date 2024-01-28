@@ -3,7 +3,7 @@ tags:: #Leetcode #[[Booking Leetcode]] #[[Group Loop]] #[[c++ std]]
 - https://leetcode.cn/problems/merge-intervals/description/
 - {{embed [[56.合并区间]]}}
 - Sorting according to first, then group loop
-- `sort(vec.begin(), vec.end(), [](auto& a, auto& b){return a[0] < b[0];})` remember to use reference for lambda and this gives an increasing sort.
+- `sort(vec.begin(), vec.end(), [](auto& a, auto& b){return a[0] < b[0];})` remember to use reference for lambda and this gives an increasing sort. [[Custom Sort with Lambda in C++]]
 - ```cpp
   vector<vector<int>> merge(vector<vector<int>> &intervals)
   {

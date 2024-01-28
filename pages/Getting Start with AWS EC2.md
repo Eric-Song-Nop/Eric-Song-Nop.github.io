@@ -10,3 +10,5 @@ tags:: #AWS #DevOps
 		      IdentityFile pathToPem
 		      User ubuntu
 		  ```
+	- ### For smart Kitty users
+		- Connect with `kitten ssh $Host`

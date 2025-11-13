@@ -56,13 +56,25 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
-    - name: Verify documentation files
+    - name: Ensure index.html exists for GitHub Pages
       run: |
-        echo "📁 Generated files:"
-        ls -la ./output/
+        if [ ! -f "./output/index.html" ]; then
+          echo "📝 index.html not found, copying cireIndex.html as main entry"
+          if [ -f "./output/cireIndex.html" ]; then
+            cp "./output/cireIndex.html" "./output/index.html"
+            echo "✅ cireIndex.html copied to index.html successfully"
+          else
+            echo "❌ ERROR: Neither index.html nor cireIndex.html found!"
+            echo "This means the documentation generation failed."
+            exit 1
+          fi
+        else
+          echo "✅ index.html already exists, keeping original file"
+        fi
+
         echo ""
-        echo "✅ cireIndex.html - Project navigation index"
-        echo "✅ index.html - Individual file documentation"
+        echo "📁 Final output files:"
+        ls -la ./output/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

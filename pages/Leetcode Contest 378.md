@@ -1,2 +1,0 @@
-- [[Palindrome Rearrangement Queries]]
--

@@ -1,0 +1,54 @@
+{
+  name: "Eric-Song-Nop.github.io",
+  version: "0.0.1",
+  description: "Ericoolen's page",
+
+  // 源代码输入配置
+  input: {
+    root: "./src",                    // 源代码根目录
+
+    // 包含的文件模式
+    include: [
+      "**/*.ts",                      // TypeScript 源文件
+    ],
+
+    // 排除的文件模式
+    exclude: [
+      "**/*.test.ts",                 // 测试文件
+      "**/*.spec.ts",
+      "**/*.d.ts",                    // TypeScript 声明文件
+      "node_modules/**",              // 依赖目录
+      "dist/**",                      // 构建输出目录
+      "templates/**",                 // 模板文件
+    ],
+
+    language: "typescript",           // 源代码语言
+  },
+
+  // 输出配置
+  output: {
+    directory: "./output",           // 输出到 output 目录，便于 Netlify 部署
+    baseUrl: "/",
+  },
+
+  // LSP 配置（暂时不启用 SCIP）
+  lsp: {
+    indexPath: "index.scip",
+    provider: "scip",
+  },
+
+  // 模板配置 - 展示 Cire 的新模板化功能
+  template: {
+    layout: "default",                // 使用默认布局，展示完整功能
+    theme: "auto",                    // 自动主题检测，支持暗色模式
+  },
+
+  // 功能开关 - 配置 Cire 的各项功能
+  features: {
+    syntaxHighlighting: true,         // 启用语法高亮（Tree-sitter）
+    hoverDocumentation: true,        // 启用 hover 文档（需要 SCIP 索引）
+    definitionJumping: true,          // 启用点击跳转到定义功能
+    commentMarkdown: true,            // 启用注释转 Markdown 功能
+    navigationIndex: true,            // 启用导航索引页面生成
+  },
+}

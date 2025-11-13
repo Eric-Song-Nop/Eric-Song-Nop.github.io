@@ -9,7 +9,7 @@
 		"build": "tsc",
 		"dev": "tsc --watch",
 		"start": "node dist/index.js",
-		"build:docs": "scip-typescript index && cire -c .cire.json5",
+		"build:docs": "npx @sourcegraph/scip-typescript index && cire -c .cire.json5",
 		"lint": "biome check",
 		"lint:fix": "biome check --fix",
 		"format": "biome format",

@@ -14,6 +14,9 @@ importers:
       '@cire-doc/cire-cli':
         specifier: ^0.1.0
         version: 0.1.0
+      '@sourcegraph/scip-typescript':
+        specifier: ^0.4.0
+        version: 0.4.0
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.1

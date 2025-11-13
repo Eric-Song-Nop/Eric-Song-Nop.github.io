@@ -24,6 +24,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
 		"@cire-doc/cire-cli": "^0.1.0",
+		"@sourcegraph/scip-typescript": "^0.4.0",
 		"@types/node": "^24.10.1",
 		"typescript": "^5.9.3"
 	}

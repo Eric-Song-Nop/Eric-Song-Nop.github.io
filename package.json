@@ -8,20 +8,26 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "tsc --watch",
-		"start": "node dist/index.js",
 		"build:docs": "npx @sourcegraph/scip-typescript index && cire -c .cire.json5",
 		"lint": "biome check",
 		"lint:fix": "biome check --fix",
 		"format": "biome format",
 		"format:write": "biome format --fix",
-		"clean": "rm -rf dist",
+		"clean": "rm -rf dist && rm -rf output",
 		"type-check": "tsc --noEmit"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"packageManager": "pnpm@10.19.0",
+	"dependencies": {
+		"google-protobuf": "^3.20.1",
+		"@sourcegraph/scip": "github:sourcegraph/scip",
+		"tree-sitter": "^0.25.0",
+		"tree-sitter-typescript": "^0.23.2"
+	},
 	"devDependencies": {
+		"@types/google-protobuf": "^3.15.12",
 		"@biomejs/biome": "2.2.7",
 		"@cire-doc/cire-cli": "^0.1.0",
 		"@sourcegraph/scip-typescript": "^0.4.0",

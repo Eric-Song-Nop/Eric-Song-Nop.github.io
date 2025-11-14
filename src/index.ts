@@ -1,15 +1,32 @@
 /**
- * 主入口文件
+ * # Welecome to Ericoolen's site
  *
- * 这是一个基础的 TypeScript 项目模板
- * 使用 pnpm 作为包管理器，Biome 作为代码格式化工具
+ * This site serves as my blog site, which is generated with [cire](www.github.com/Eric-Song-Nop/cire).
+ * The source of all document are just regular typescript source code files,
+ * and are transformed to html files by cire, with all lovely features of a nicely configured ide.
+ * You can find more info about cire on this site.
+ *
+ * Click the home icon on top right to goto the navigation page of this site to view all the pages(or simply all source code).
  */
 
 function greet(name: string): string {
-	return `Hello, ${name}!`;
+	return `Hello, from ${name}!`;
 }
 
-const message = greet("TypeScript World");
-console.log(message);
+const message = greet("Ericoolen");
 
-export { greet };
+/**
+ * ## About me
+ *
+ * CONSIDER HIRE ME, I am kind of unemployed now.
+ */
+
+const engineeringSkills = {
+	"professional level": [
+		"full stack",
+		"compiler engineering",
+		"formalization",
+		"computer graphics",
+		"frontend",
+	],
+};

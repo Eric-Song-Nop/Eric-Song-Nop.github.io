@@ -57,3 +57,5 @@ examples/*.html
 
 # Netlify build output (generated during deployment)
 output/
+
+temp.json

@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@sourcegraph/scip':
+        specifier: github:sourcegraph/scip
+        version: '@sourcegraph/scip-root@https://codeload.github.com/sourcegraph/scip/tar.gz/9d5796159c97c3b107355c424f6c06fb1a0ea01c'
+      google-protobuf:
+        specifier: ^3.20.1
+        version: 3.21.4
+      tree-sitter:
+        specifier: ^0.25.0
+        version: 0.25.0
+      tree-sitter-typescript:
+        specifier: ^0.23.2
+        version: 0.23.2(tree-sitter@0.25.0)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.7
@@ -17,6 +30,9 @@ importers:
       '@sourcegraph/scip-typescript':
         specifier: ^0.4.0
         version: 0.4.0
+      '@types/google-protobuf':
+        specifier: ^3.15.12
+        version: 3.15.12
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.1
@@ -99,6 +115,9 @@ packages:
   '@sourcegraph/scip-typescript@0.4.0':
     resolution: {integrity: sha512-k+AtsrqmS41Sd5qjkZlHcmvoSQIvBOonRj4jpgp0KNFM6aqvMGpdSuPUqrUcg8ENTKjUbfaUVszgQwq3bCOvwA==, tarball: https://registry.npmjs.org/@sourcegraph/scip-typescript/-/scip-typescript-0.4.0.tgz}
     hasBin: true
+
+  '@types/google-protobuf@3.15.12':
+    resolution: {integrity: sha512-40um9QqwHjRS92qnOaDpL7RmDK15NuZYo9HihiJRbYkMQZlWnuH8AdvbMy8/o6lgLmKbDUKa+OALCltHdbOTpQ==, tarball: https://registry.npmjs.org/@types/google-protobuf/-/google-protobuf-3.15.12.tgz}
 
   '@types/handlebars@4.1.0':
     resolution: {integrity: sha512-gq9YweFKNNB1uFK71eRqsd4niVkXrxHugqWFQkeLRJvGjnxsLr16bYtcsG4tOFwmYi0Bax+wCkbf1reUfdl4kA==, tarball: https://registry.npmjs.org/@types/handlebars/-/handlebars-4.1.0.tgz}
@@ -403,6 +422,8 @@ snapshots:
       google-protobuf: 3.21.4
       progress: 2.0.3
       typescript: 5.9.3
+
+  '@types/google-protobuf@3.15.12': {}
 
   '@types/handlebars@4.1.0':
     dependencies:

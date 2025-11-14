@@ -57,3 +57,7 @@ const parser = new Parser();
 import TypeScriptLangs from "tree-sitter-typescript";
 parser.setLanguage(TypeScriptLangs.typescript as Parser.Language)
 /** We will be able to support any languages. */
+
+/** ## Goto top */
+// Why we cannot do the goto top this way?
+const _: TryHover = clickme;

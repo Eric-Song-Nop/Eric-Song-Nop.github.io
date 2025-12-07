@@ -20,7 +20,7 @@ const config: Config = {
     url: 'https://Eric-Song-Nop.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: '/Eric-Song-Nop.github.io/',
+    baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -50,6 +50,14 @@ const config: Config = {
                     feedOptions: {
                         type: ['rss', 'atom'],
                         xslt: true,
+                        createFeedItems: async (params) => {
+                            const { blogPosts, defaultCreateFeedItems, ...rest } = params;
+                            return defaultCreateFeedItems({
+                                // keep only the 10 most recent blog posts in the feed
+                                blogPosts: blogPosts.filter((item, index) => index < 10),
+                                ...rest,
+                            });
+                        },
                     },
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
@@ -101,6 +109,10 @@ const config: Config = {
                 {
                     title: 'More',
                     items: [
+                        {
+                            label: 'RSS',
+                            href: 'https://Eric-Song-Nop.github.io/rss.xml',
+                        },
                         {
                             label: 'Github',
                             to: 'https://github.com/Eric-Song-Nop/Eric-Song-Nop.github.io',

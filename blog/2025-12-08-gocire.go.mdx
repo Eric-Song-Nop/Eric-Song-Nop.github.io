@@ -1,0 +1,139 @@
+---
+title: Go Cire generate docs with ide features
+slug: /
+---
+
+Gocire is a static document generator that turns your source code into documents directly.
+It's highly inspired by Lean4 verso, Aya's literate programming mode and TypeScript's twoslash package.
+However compare to them, we turn the comment into document, and equip source code powerful IDE-like features,
+moreover, we support multiple programming languages, in fact, all languages supported by both [Tree-Sitter](https://tree-sitter.github.io/) and [SCIP](https://github.com/sourcegraph/scip/).
+{/* truncate */}
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`package`}</span><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<hr>
+<h2 id="slug-">title: Go Cire generate docs with ide features<br>
+slug: /</h2>
+<p>Gocire is a static document generator that turns your source code into documents directly.<br>
+It's highly inspired by Lean4 verso, Aya's literate programming mode and TypeScript's twoslash package.<br>
+However compare to them, we turn the comment into document, and equip source code powerful IDE-like features,<br>
+moreover, we support multiple programming languages, in fact, all languages supported by both <a href="https://tree-sitter.github.io/">Tree-Sitter</a> and <a href="https://github.com/sourcegraph/scip/">SCIP</a>.<br>
+{/* truncate */}</p>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/" className="">{`blog`}</span></Tooltip></code></pre>
+</details>
+## IDE features
+
+For now gocire supports hover and jump to definition in local file.
+For example, this is struct definition for a token in defined in goscip
+
+You can try to hover on struct names for documentation.
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type TokenInfo struct
+</code></pre>
+<p>For example, this is struct definition for a token in defined in goscip</p>
+<p>You can try to hover on struct names for documentation.</p>
+<pre><code class="language-go">struct {
+    Symbol string
+    Document []string
+    Span Range
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23" className="type">{`TokenInfo`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Symbol string
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Symbol." className="property">{`Symbol`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`string`}</span><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Document []string
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Document." className="property">{`Document`}</span></Tooltip><span className="cire_text">{` []`}</span><span className="type">{`string`}</span><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Span github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Range
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Span." className="property">{`Span`}</span></Tooltip><span className="cire_text">{`     `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct
+</code></pre>
+<p>Range from start to end position</p>
+<p>The same as most compilers, it includes left, not end <code>[Start, End)</code><br>
+The hover info is CommonMark compatible and supports <code>KaTex</code><br>
+Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\\alpha + \\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span></p>
+<pre><code class="language-go">struct {
+    Start Position
+    End Position
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</a></Tooltip><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+Position line column position of a token
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
+</code></pre>
+<p>Position line column position of a token</p>
+<pre><code class="language-go">struct {
+    Line int
+    Column int
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Line int
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Line." className="property">{`Line`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`int`}</span><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Column int
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Column." className="property">{`Column`}</span></Tooltip><span className="cire_text">{` `}</span><span className="type">{`int`}</span><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+Range from start to end position
+
+The same as most compilers, it includes left, not end `[Start, End)`
+The hover info is CommonMark compatible and supports `KaTex`
+Try hover on `Range`: $\alpha + \beta$
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct
+</code></pre>
+<p>Range from start to end position</p>
+<p>The same as most compilers, it includes left, not end <code>[Start, End)</code><br>
+The hover info is CommonMark compatible and supports <code>KaTex</code><br>
+Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\\alpha + \\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span></p>
+<pre><code class="language-go">struct {
+    Start Position
+    End Position
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Start github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Position
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23Start." className="property">{`Start`}</span></Tooltip><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
+</code></pre>
+<p>Position line column position of a token</p>
+<pre><code class="language-go">struct {
+    Line int
+    Column int
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field End github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Position
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23End." className="property">{`End`}</span></Tooltip><span className="cire_text">{`   `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
+</code></pre>
+<p>Position line column position of a token</p>
+<pre><code class="language-go">struct {
+    Line int
+    Column int
+}
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+We did this with the help of [SCIP](https://github.com/sourcegraph/scip/), which is a language index format that works for a few programming languages.
+## Highlighting
+
+You might have noticed, yes, we did all code syntax highlighting ourselves with [Tree-Sitter](https://tree-sitter.github.io/).
+I don't want to cover this a lot, as we just follow the standard query based method for highlighting.
+
+We haven't implemented highlight queries for all languages, but it should work for most languages supported by SCIP now.
+
+While for code blocks in comment, they are handled by your markdown renderer.

@@ -1,37 +1,47 @@
 {
-	"name": "Eric-Song-Nop.github.io",
-	"version": "1.0.0",
-	"description": "A modern TypeScript project using pnpm and Biome",
-	"type": "module",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"scripts": {
-		"build": "tsc",
-		"dev": "tsc --watch",
-		"build:docs": "npx @sourcegraph/scip-typescript index && cire -c .cire.json5",
-		"lint": "biome check",
-		"lint:fix": "biome check --fix",
-		"format": "biome format",
-		"format:write": "biome format --fix",
-		"clean": "rm -rf dist && rm -rf output",
-		"type-check": "tsc --noEmit"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"packageManager": "pnpm@10.19.0",
-	"dependencies": {
-		"google-protobuf": "^3.20.1",
-		"@sourcegraph/scip": "github:sourcegraph/scip",
-		"tree-sitter": "^0.25.0",
-		"tree-sitter-typescript": "^0.23.2"
-	},
-	"devDependencies": {
-		"@types/google-protobuf": "^3.15.12",
-		"@biomejs/biome": "2.2.7",
-		"@cire-doc/cire-cli": "^0.1.0",
-		"@sourcegraph/scip-typescript": "^0.4.0",
-		"@types/node": "^24.10.1",
-		"typescript": "^5.9.3"
-	}
+  "name": "ericoolen",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "typescript": "~5.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
 }

@@ -1,6 +1,9 @@
 // ---
 // title: Go Cire generate docs with ide features
+// authors: ericoolen
 // slug: /
+// tags:
+//   - cire
 // ---
 //
 // Gocire is a static document generator that turns your source code into documents directly.

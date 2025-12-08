@@ -2,3 +2,8 @@ docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: Docusaurus tag description
+
+cire:
+  label: Cire
+  permalink: /cire
+  description: Cire Static Document Generator

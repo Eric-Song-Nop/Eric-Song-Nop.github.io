@@ -6,26 +6,44 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Gruvbox Light Palette */
+  --ifm-color-primary: #689d6a;
+  --ifm-color-primary-dark: #5e8d5f;
+  --ifm-color-primary-darker: #59855a;
+  --ifm-color-primary-darkest: #496e4a;
+  --ifm-color-primary-light: #72ad75;
+  --ifm-color-primary-lighter: #77b57a;
+  --ifm-color-primary-lightest: #85c889;
+
+  --ifm-background-color: #fbf1c7;
+  --ifm-background-surface-color: #f2e5bc;
+  --ifm-color-content: #3c3836;
+  --ifm-navbar-background-color: #fbf1c7;
+  --ifm-footer-background-color: #f2e5bc;
+  --ifm-link-color: #689d6a;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Gruvbox Dark Palette */
+  --ifm-color-primary: #8ec07c;
+  --ifm-color-primary-dark: #80ad70;
+  --ifm-color-primary-darker: #79a36a;
+  --ifm-color-primary-darkest: #648657;
+  --ifm-color-primary-light: #9cd388;
+  --ifm-color-primary-lighter: #a3db8e;
+  --ifm-color-primary-lightest: #b9f2a0;
+
+  --ifm-background-color: #282828;
+  --ifm-background-surface-color: #3c3836;
+  --ifm-color-content: #ebdbb2;
+  --ifm-navbar-background-color: #282828;
+  --ifm-footer-background-color: #3c3836;
+  --ifm-link-color: #8ec07c;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -501,6 +519,13 @@ div[class*='codeBlockContainer'] + .cire,
 @import "@rc-component/tooltip/assets/bootstrap.css";
 
 /* === Tooltip Theme Overrides === */
+.rc-tooltip {
+  font-family: var(--ifm-font-family-base) !important;
+  font-size: var(--ifm-code-font-size) !important;
+  line-height: 1.5;
+  opacity: 1;
+}
+
 .rc-tooltip-container {
   background-color: var(--ifm-background-color) !important;
   color: var(--ifm-color-content) !important;
@@ -509,6 +534,7 @@ div[class*='codeBlockContainer'] + .cire,
   border: 1px solid var(--ifm-color-emphasis-200) !important;
   font-family: var(--ifm-font-family-base) !important;
   font-size: var(--ifm-code-font-size) !important;
+  opacity: 1 !important;
 }
 
 .rc-tooltip-placement-top .rc-tooltip-arrow,

@@ -1,6 +1,9 @@
 ---
 title: Go Cire generate docs with ide features
+authors: ericoolen
 slug: /
+tags:
+  - cire
 ---
 
 Gocire is a static document generator that turns your source code into documents directly.
@@ -12,14 +15,20 @@ moreover, we support multiple programming languages, in fact, all languages supp
 <summary>Expand to view code</summary>
 <pre className="cire"><code>
 <span className="keyword">{`package`}</span><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<hr>
-<h2 id="slug-">title: Go Cire generate docs with ide features<br>
-slug: /</h2>
+<p>title: Go Cire generate docs with ide features<br>
+authors: ericoolen<br>
+slug: /<br>
+tags:</p>
+<ul>
+<li>cire</li>
+</ul>
+<hr>
 <p>Gocire is a static document generator that turns your source code into documents directly.<br>
 It's highly inspired by Lean4 verso, Aya's literate programming mode and TypeScript's twoslash package.<br>
 However compare to them, we turn the comment into document, and equip source code powerful IDE-like features,<br>
 moreover, we support multiple programming languages, in fact, all languages supported by both <a href="https://tree-sitter.github.io/">Tree-Sitter</a> and <a href="https://github.com/sourcegraph/scip/">SCIP</a>.<br>
 {/* truncate */}</p>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/" className="">{`blog`}</span></Tooltip></code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/" className="">{`blog`}</span></Tooltip></code></pre>
 </details>
 ## IDE features
 
@@ -40,16 +49,16 @@ You can try to hover on struct names for documentation.
     Span Range
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23" className="type">{`TokenInfo`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23" className="type">{`TokenInfo`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Symbol string
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Symbol." className="property">{`Symbol`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`string`}</span><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Symbol." className="property">{`Symbol`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`string`}</span><span className="cire_text">{`
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Document []string
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Document." className="property">{`Document`}</span></Tooltip><span className="cire_text">{` []`}</span><span className="type">{`string`}</span><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Document." className="property">{`Document`}</span></Tooltip><span className="cire_text">{` []`}</span><span className="type">{`string`}</span><span className="cire_text">{`
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Span github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Range
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Span." className="property">{`Span`}</span></Tooltip><span className="cire_text">{`     `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/TokenInfo%23Span." className="property">{`Span`}</span></Tooltip><span className="cire_text">{`     `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct
 </code></pre>
 <p>Range from start to end position</p>
 <p>The same as most compilers, it includes left, not end <code>[Start, End)</code><br>
@@ -60,7 +69,7 @@ Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml">
     End Position
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</a></Tooltip><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</a></Tooltip><span className="cire_text">{`
 }`}</span></code></pre>
 </details>
 Position line column position of a token
@@ -75,13 +84,13 @@ Position line column position of a token
     Column int
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Line int
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Line." className="property">{`Line`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`int`}</span><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Line." className="property">{`Line`}</span></Tooltip><span className="cire_text">{`   `}</span><span className="type">{`int`}</span><span className="cire_text">{`
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Column int
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Column." className="property">{`Column`}</span></Tooltip><span className="cire_text">{` `}</span><span className="type">{`int`}</span><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23Column." className="property">{`Column`}</span></Tooltip><span className="cire_text">{` `}</span><span className="type">{`int`}</span><span className="cire_text">{`
 }`}</span></code></pre>
 </details>
 Range from start to end position
@@ -103,10 +112,10 @@ Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml">
     End Position
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23" className="type">{`Range`}</span></Tooltip><span className="cire_text">{` `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{` {
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field Start github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Position
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23Start." className="property">{`Start`}</span></Tooltip><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23Start." className="property">{`Start`}</span></Tooltip><span className="cire_text">{` `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
 </code></pre>
 <p>Position line column position of a token</p>
 <pre><code class="language-go">struct {
@@ -114,10 +123,10 @@ Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml">
     Column int
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
 \t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">struct field End github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog.Position
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23End." className="property">{`End`}</span></Tooltip><span className="cire_text">{`   `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
+` }} />} placement="top" trigger={['hover']}><span id="scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Range%23End." className="property">{`End`}</span></Tooltip><span className="cire_text">{`   `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct
 </code></pre>
 <p>Position line column position of a token</p>
 <pre><code class="language-go">struct {
@@ -125,7 +134,7 @@ Try hover on <code>Range</code>: <span class="katex"><span class="katex-mathml">
     Column int
 }
 </code></pre>
-` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+3b5347df6dca+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+` }} />} placement="top" trigger={['hover']}><a href="#scip-go+gomod+github.com/Eric-Song-Nop/Eric-Song-Nop.github.io+4187af59abd3+%60github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog%60/Position%23" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
 }`}</span></code></pre>
 </details>
 We did this with the help of [SCIP](https://github.com/sourcegraph/scip/), which is a language index format that works for a few programming languages.

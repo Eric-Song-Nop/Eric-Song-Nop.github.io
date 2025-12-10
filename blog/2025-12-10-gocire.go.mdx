@@ -1,0 +1,183 @@
+---
+title: Go Cire generate docs with ide features
+authors: ericoolen
+slug: /
+tags:
+  - cire
+
+---
+
+Gocire is a static document generator that turns your source code into documents directly.
+It's highly inspired by Lean4 verso, Aya's literate programming mode and TypeScript's twoslash package.
+However compare to them, we turn the comment into document, and equip source code powerful IDE-like features,
+moreover, we support multiple programming languages, in fact, all languages supported by both [Tree-Sitter](https://tree-sitter.github.io/) and [SCIP](https://github.com/sourcegraph/scip/).
+{/* truncate */}
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`package`}</span><span className="cire_text">{`\ blog`}</span></code></pre>
+</details>
+## IDE features
+
+For now gocire supports hover and jump to definition in local file.
+For example, this is struct definition for a token in defined in goscip
+
+You can try to hover on struct names for documentation.
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{`\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type TokenInfo struct { // size=72 (0x48), class=80 (0x50)
+	Symbol   string
+	Document []string
+	Span     Range
+}
+</code></pre>
+<hr>
+<p>For example, this is struct definition for a token in defined in goscip</p>
+<p>You can try to hover on struct names for documentation.</p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#TokenInfo"><code>blog.TokenInfo</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_23_5" className="type">{`TokenInfo`}</span></Tooltip><span className="cire_text">{`\ `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{`\ {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Symbol string // size=16 (0x10), offset=0
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#TokenInfo.Symbol"><code>(blog.TokenInfo).Symbol</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_24_1" className="property">{`Symbol`}</span></Tooltip><span className="cire_text">{`\ \ \ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type string string
+</code></pre>
+<hr>
+<p>string is the set of all strings of 8-bit bytes, conventionally but not necessarily representing UTF-8-encoded text. A string may be empty, but not nil. Values of string type are immutable.</p>
+<hr>
+<p><a href="https://pkg.go.dev/builtin#string"><code>string</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span className="type">{`string`}</span></Tooltip><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Document []string // size=24 (0x18), offset=16 (0x10)
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#TokenInfo.Document"><code>(blog.TokenInfo).Document</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_25_1" className="property">{`Document`}</span></Tooltip><span className="cire_text">{`\ []`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type string string
+</code></pre>
+<hr>
+<p>string is the set of all strings of 8-bit bytes, conventionally but not necessarily representing UTF-8-encoded text. A string may be empty, but not nil. Values of string type are immutable.</p>
+<hr>
+<p><a href="https://pkg.go.dev/builtin#string"><code>string</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span className="type">{`string`}</span></Tooltip><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Span Range // size=32 (0x20), offset=40 (0x28)
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#TokenInfo.Span"><code>(blog.TokenInfo).Span</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_26_1" className="property">{`Span`}</span></Tooltip><span className="cire_text">{`\ \ \ \ \ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct {
+	Start Position
+	End   Position
+}
+</code></pre>
+<hr>
+<p>Range from start to end position</p>
+<p>The same as most compilers, it includes left, not end \`[Start, End)\` The hover info is CommonMark compatible and supports \`KaTex\` Try hover on \`Range\`: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>a</mi><mi>l</mi><mi>p</mi><mi>h</mi><mi>a</mi><mo>+</mo><mspace linebreak="newline"></mspace><mi>b</mi><mi>e</mi><mi>t</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">\\\\alpha + \\\\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">lp</span><span class="mord mathnormal">ha</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span></span></span></span></p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Range"><code>blog.Range</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><a href="#def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_40_5" className="type">{`Range`}</a></Tooltip><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+Position line column position of a token
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{`\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct { // size=16 (0x10)
+	Line   int
+	Column int
+}
+</code></pre>
+<hr>
+<p>Position line column position of a token</p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Position"><code>blog.Position</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_30_5" className="type">{`Position`}</span></Tooltip><span className="cire_text">{`\ `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{`\ {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Line int // size=8, offset=0
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Position.Line"><code>(blog.Position).Line</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_31_1" className="property">{`Line`}</span></Tooltip><span className="cire_text">{`\ \ \ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type int int
+</code></pre>
+<hr>
+<p>int is a signed integer type that is at least 32 bits in size. It is a distinct type, however, and not an alias for, say, int32.</p>
+<hr>
+<p><a href="https://pkg.go.dev/builtin#int"><code>int</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span className="type">{`int`}</span></Tooltip><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Column int // size=8, offset=8
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Position.Column"><code>(blog.Position).Column</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_32_1" className="property">{`Column`}</span></Tooltip><span className="cire_text">{`\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type int int
+</code></pre>
+<hr>
+<p>int is a signed integer type that is at least 32 bits in size. It is a distinct type, however, and not an alias for, say, int32.</p>
+<hr>
+<p><a href="https://pkg.go.dev/builtin#int"><code>int</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span className="type">{`int`}</span></Tooltip><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+Range from start to end position
+
+The same as most compilers, it includes left, not end `[Start, End)`
+The hover info is CommonMark compatible and supports `KaTex`
+Try hover on `Range`: $\alpha + \beta$
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="keyword">{`type`}</span><span className="cire_text">{`\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Range struct { // size=32 (0x20)
+	Start Position
+	End   Position
+}
+</code></pre>
+<hr>
+<p>Range from start to end position</p>
+<p>The same as most compilers, it includes left, not end \`[Start, End)\` The hover info is CommonMark compatible and supports \`KaTex\` Try hover on \`Range\`: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>a</mi><mi>l</mi><mi>p</mi><mi>h</mi><mi>a</mi><mo>+</mo><mspace linebreak="newline"></mspace><mi>b</mi><mi>e</mi><mi>t</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">\\\\alpha + \\\\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">lp</span><span class="mord mathnormal">ha</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span></span></span></span></p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Range"><code>blog.Range</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_40_5" className="type">{`Range`}</span></Tooltip><span className="cire_text">{`\ `}</span><span className="keyword">{`struct`}</span><span className="cire_text">{`\ {
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field Start Position // size=16 (0x10), offset=0
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Range.Start"><code>(blog.Range).Start</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_41_1" className="property">{`Start`}</span></Tooltip><span className="cire_text">{`\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct {
+	Line   int
+	Column int
+}
+</code></pre>
+<hr>
+<p>Position line column position of a token</p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Position"><code>blog.Position</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><a href="#def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_30_5" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+\t`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">field End Position // size=16 (0x10), offset=16 (0x10)
+</code></pre>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Range.End"><code>(blog.Range).End</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_42_1" className="property">{`End`}</span></Tooltip><span className="cire_text">{`\ \ \ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-go">type Position struct {
+	Line   int
+	Column int
+}
+</code></pre>
+<hr>
+<p>Position line column position of a token</p>
+<hr>
+<p><a href="https://pkg.go.dev/github.com/Eric-Song-Nop/Eric-Song-Nop.github.io/blog#Position"><code>blog.Position</code> on pkg.go.dev</a></p>
+` }} />} placement="top" trigger={['hover']}><a href="#def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_go_30_5" className="type">{`Position`}</a></Tooltip><span className="cire_text">{`
+}`}</span></code></pre>
+</details>
+In the beginning, we did this with the help of [SCIP](https://github.com/sourcegraph/scip/), which is a language index format that works for a few programming languages.
+
+While for programming languages not supported by SCIP, we also support to index them directly with your local language server.
+To achieve this, gocire implemented a very basic language server client supporting:
+- DefinitionTextDocumentClientCapabilities
+- HoverTextDocumentClientCapabilities
+
+In general, I recomment to use LSP instead of SCIP, as it provides for documentation, while SCIP focus more on navigation.
+With LSP, you can even jump to documentation page from hover tooltip.
+## Highlighting
+
+You might have noticed, yes, we did all code syntax highlighting ourselves with [Tree-Sitter](https://tree-sitter.github.io/).
+I don't want to cover this a lot, as we just follow the standard query based method for highlighting.
+
+We haven't implemented highlight queries for all languages, but it should work for most languages supported by SCIP now.
+
+While for code blocks in comment, they are handled by your markdown renderer.

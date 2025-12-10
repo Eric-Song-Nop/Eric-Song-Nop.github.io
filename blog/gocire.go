@@ -4,6 +4,7 @@
 // slug: /
 // tags:
 //   - cire
+//
 // ---
 //
 // Gocire is a static document generator that turns your source code into documents directly.
@@ -42,7 +43,15 @@ type Range struct {
 	End   Position
 }
 
-// We did this with the help of [SCIP](https://github.com/sourcegraph/scip/), which is a language index format that works for a few programming languages.
+// In the beginning, we did this with the help of [SCIP](https://github.com/sourcegraph/scip/), which is a language index format that works for a few programming languages.
+//
+// While for programming languages not supported by SCIP, we also support to index them directly with your local language server.
+// To achieve this, gocire implemented a very basic language server client supporting:
+// - DefinitionTextDocumentClientCapabilities
+// - HoverTextDocumentClientCapabilities
+//
+// In general, I recomment to use LSP instead of SCIP, as it provides for documentation, while SCIP focus more on navigation.
+// With LSP, you can even jump to documentation page from hover tooltip.
 
 // ## Highlighting
 //

@@ -1,0 +1,27 @@
+---
+title: Gocire generate docs with ide features does work for multiple languages
+authors: ericoolen
+tags:
+  - cire
+---
+Gocire supports multiple programming languages, yes.
+<details open="true">
+<summary>Expand to view code</summary>
+<pre className="cire"><code>
+<span className="cire_text">{`class\ `}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-typescript">class GoCire
+</code></pre>
+<p>Gocire supports multiple programming languages, yes.</p>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_multilang_ts_9_6" className="type">{`GoCire`}</span></Tooltip><span className="cire_text">{`\ {
+\ \ \ \ constructor(`}</span><Tooltip overlay={<div className="cire-markdown" dangerouslySetInnerHTML={{ __html: `<pre><code class="language-typescript">(parameter) parameters: any
+</code></pre>
+` }} />} placement="top" trigger={['hover']}><span id="def__Users_eric_Documents_Sources_cires_Eric_Song_Nop_github_io_blog_gocire_multilang_ts_10_16" className="variable.parameter">{`parameters`}</span></Tooltip><span className="cire_text">{`)\ {
+\ \ \ \ }
+}`}</span></code></pre>
+</details>
+In fact, we should be able to support all programming languages with support by [Tree-Sitter](https://tree-sitter.github.io/) with [LSP](https://microsoft.github.io/language-server-protocol/) or [SCIP](https://github.com/sourcegraph/scip/).
+
+This is super helpful for programming languages with inference or gradual typing.
+For example, the monad language, Haskell, some people(me) really rely on editor's inlay hint
+or hover documentation to understand what's going on with types, and yes gocire supports Haskell with hls.
+
+While for now, we cannot have multiple source code of multiple languages in one file, as we are using the source code itself as doc source, thus I have to demonstrate how it works on haskell in another file.

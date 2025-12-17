@@ -7,3 +7,8 @@ cire:
   label: Cire
   permalink: /cire
   description: Cire Static Document Generator
+
+pl:
+  label: Programming Language
+  permalink: /pl
+  description: Programming Language and Compiler Related Topics

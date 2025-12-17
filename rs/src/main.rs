@@ -1,6 +1,5 @@
 // ---
 // title: Copy of Simple but Powerful Pratt Parsing from Matklad
-// slug: /
 // tags:
 //   - pl
 //

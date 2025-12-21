@@ -6,6 +6,13 @@
 // ---
 //
 // # Simple but Powerful Pratt Parsing from Matklad
+// This is a copy of [Simple but Powerful Pratt Parsing from
+// [Matklad's blog](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html) with no
+// modifications at all.
+//
+// I am copying this bolg simply because I really love this blog, and I want to show case how
+// gocire works with lsp can bring ide features to a blog.
+// {/* truncate */}
 use std::{fmt, io::BufRead};
 
 enum S {

@@ -442,6 +442,32 @@ html[data-theme='dark'] .cire .function.macro {
   font-weight: 600;
 }
 
+/* === Inlay Hints === */
+:root .cire .inlay-hint,
+html[data-theme='light'] .cire .inlay-hint {
+  color: #928374;
+  background-color: #ebdbb2;
+  font-size: 0.75em;
+  padding: 0 0.2em;
+  border-radius: 2px;
+  margin: 0 0.1em;
+  opacity: 0.8;
+  vertical-align: middle;
+  user-select: none;
+}
+
+html[data-theme='dark'] .cire .inlay-hint {
+  color: #a89984;
+  background-color: #3c3836;
+  font-size: 0.75em;
+  padding: 0 0.2em;
+  border-radius: 2px;
+  margin: 0 0.1em;
+  opacity: 0.8;
+  vertical-align: middle;
+  user-select: none;
+}
+
 /* === Responsive design === */
 @media (max-width: 996px) {
   .cire {

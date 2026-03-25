@@ -12,3 +12,18 @@ pl:
   label: Programming Language
   permalink: /pl
   description: Programming Language and Compiler Related Topics
+
+mobvibe:
+  label: Mobvibe
+  permalink: /mobvibe-tag
+  description: Mobvibe project notes and product updates
+
+acp:
+  label: ACP
+  permalink: /acp
+  description: Agent Client Protocol related content
+
+agent:
+  label: Agent
+  permalink: /agent
+  description: AI agent workflows and tooling

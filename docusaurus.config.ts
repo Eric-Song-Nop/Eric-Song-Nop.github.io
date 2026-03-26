@@ -117,6 +117,10 @@ const config: Config = {
                             label: 'Github',
                             to: 'https://github.com/Eric-Song-Nop/Eric-Song-Nop.github.io',
                         },
+                        {
+                            label: 'linux.do',
+                            href: 'https://linux.do',
+                        },
                     ],
                 },
             ],

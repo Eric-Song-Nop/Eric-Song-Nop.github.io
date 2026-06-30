@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const gocireDir = resolve(process.env.GOCIRE_DIR || join(repoRoot, "..", "gocire"));
 const siteDir = join(repoRoot, ".gocire", "site");
+const homeRedirectTarget = "/blogs/2025_12_14_gocire.go.html/";
 
 if (!existsSync(join(gocireDir, "cmd", "gocire"))) {
   throw new Error(`GOCIRE_DIR does not point to a gocire checkout: ${gocireDir}`);
@@ -53,7 +54,10 @@ await writeHomePage();
 async function writeHomePage() {
   const navigationPath = join(siteDir, "src", "generated", "navigation.ts");
   const navigation = await readFile(navigationPath, "utf8");
-  const target = firstHref(navigation, "blog") || firstHref(navigation, "docs") || "/";
+  if (!navigation.includes(JSON.stringify(homeRedirectTarget))) {
+    throw new Error(`Generated navigation does not include homepage target: ${homeRedirectTarget}`);
+  }
+  const target = homeRedirectTarget;
   const pagesDir = join(siteDir, "src", "pages");
 
   await mkdir(pagesDir, { recursive: true });
@@ -80,9 +84,4 @@ const target = ${JSON.stringify(target)};
 </html>
 `,
   );
-}
-
-function firstHref(source, section) {
-  const match = source.match(new RegExp(`${section}:\\s*\\{\\s*firstHref:\\s*"([^"]*)"`));
-  return match?.[1] ?? "";
 }

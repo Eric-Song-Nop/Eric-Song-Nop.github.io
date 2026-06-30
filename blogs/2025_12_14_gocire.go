@@ -1,11 +1,13 @@
-// # Go Cire generate docs with IDE features
+// # Go Cire generates sites with IDE features
 //
-// Gocire is a static document generator that turns source code into documents.
+// [Gocire](https://www.github.com/Eric-Song-Nop/gocire) is a static document generator that turns source code into documents.
 // It is inspired by Lean 4 Verso, Aya's literate programming mode, and
 // TypeScript twoslash, but it keeps the source file as the document source.
 //
 // This site is generated with the Astro backend and uses language servers for
 // hover cards, jump-to-definition links, and inlay hints.
+// You can consider this project hosted at <https://www.github.com/Eric-Song-Nop/Eric-Song-Nop.github.io>
+// as a tutorial of how to use gocire to generate a blog site with IDE features.
 package blogs
 
 // ## IDE features

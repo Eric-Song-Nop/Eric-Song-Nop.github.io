@@ -1,0 +1,24 @@
+site:
+  title: Ericoolen
+project:
+  root: .
+content:
+  docs: docs
+  blogs: blogs
+source:
+  routePrefix: /
+  include:
+    - blogs/**/*.go
+    - blogs/**/*.ts
+    - blogs/**/*.rs
+  exclude:
+    - .git/**
+    - .gocire/**
+    - .docusaurus/**
+    - node_modules/**
+    - build/**
+    - dist/**
+    - target/**
+    - lean/**
+output:
+  dir: .gocire/site

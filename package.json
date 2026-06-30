@@ -2,48 +2,24 @@
   "name": "ericoolen",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.2.1",
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
-  },
-  "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
-    "@mdx-js/react": "^3.0.0",
-    "@rc-component/tooltip": "^1.4.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0"
+    "generate": "node scripts/generate-site.mjs",
+    "site:install": "node scripts/install-generated-site.mjs",
+    "build": "pnpm run generate && pnpm run site:install && pnpm --dir .gocire/site run build",
+    "dev": "pnpm run generate && pnpm run site:install && pnpm --dir .gocire/site run dev -- --host 127.0.0.1",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/tsconfig": "3.9.2",
-    "@docusaurus/types": "3.9.2",
-    "typescript": "~5.6.2"
+    "typescript": "6.0.3",
+    "typescript-language-server": "5.3.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
-  },
+  "files": [
+    "blogs",
+    "scripts",
+    ".gocire.yml"
+  ],
   "engines": {
     "node": ">=20.0"
   }

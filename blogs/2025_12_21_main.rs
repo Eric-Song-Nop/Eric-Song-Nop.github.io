@@ -1,18 +1,11 @@
-// ---
-// title: Copy of Simple but Powerful Pratt Parsing from Matklad
-// tags:
-//   - pl
-//
-// ---
-//
 // # Simple but Powerful Pratt Parsing from Matklad
-// This is a copy of [Simple but Powerful Pratt Parsing from
-// [Matklad's blog](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html) with no
-// modifications at all.
 //
-// I am copying this bolg simply because I really love this blog, and I want to show case how
-// gocire works with lsp can bring ide features to a blog.
-// {/* truncate */}
+// This is a copy of [Simple but Powerful Pratt Parsing from Matklad's blog]
+// (https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html)
+// with no modifications to the parser logic.
+//
+// I am copying this blog because I love the original post, and because it shows
+// how gocire can bring LSP-backed IDE features to a source-driven article.
 use std::{fmt, io::BufRead};
 
 enum S {
@@ -221,4 +214,3 @@ fn main() {
         println!("{}", s)
     }
 }
-

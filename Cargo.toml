@@ -1,0 +1,8 @@
+[package]
+name = "ericoolen-blog-code"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "pratt"
+path = "blogs/2025_12_21_main.rs"

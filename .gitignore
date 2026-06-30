@@ -1,9 +1,12 @@
 # Dependency directories
 node_modules/
 
-# Docusaurus build output
-build/
+# Generated site output
+.gocire/
 .docusaurus/
+dist/
+build/
+.astro/
 
 # Environment variables
 .env
@@ -21,22 +24,10 @@ yarn-error.log*
 # IDE-specific files
 .vscode/
 
-# Package manager lock files (if you prefer to ignore them for some reason, though often they are committed)
-# pnpm-lock.yaml
-# yarn.lock
-
 # Go-related files
-*.mod
-*.sum
 *.exe
 *.test
 *.prof
 /bin/
 /pkg/
-
-*.scip
-
-
-# Added by cargo
-
-/target
+target/

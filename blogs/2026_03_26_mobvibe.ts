@@ -1,13 +1,6 @@
-// ---
-// title: Mobvibe：在任何设备上连接本地 AI Agent
-// authors: ericoolen
-// slug: /mobvibe
-// tags:
-//   - mobvibe
-//   - acp
-//   - agent
-// ---
 /**
+ * # Mobvibe：在任何设备上连接本地 AI Agent
+ *
  * Mobvibe 是一个面向本地 AI Agent 工作流的分布式 ACP WebUI。
  * 它把浏览器、桌面端或移动端界面和你本机上的 Agent CLI 连接起来，
  * 让你可以在任何设备上继续同一个会话，而不需要自己折腾反向代理或复杂网络配置。
@@ -22,7 +15,6 @@
  * npx @mobvibe/cli start
  * ```
  */
-// {/* truncate */}
 
 export const quickStartCommands = [
 	"npx @mobvibe/cli login",

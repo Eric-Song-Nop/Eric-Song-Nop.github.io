@@ -1,41 +1,42 @@
-# Website
+# Ericoolen
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This site is generated from source files with the Astro backend in
+[`gocire`](https://github.com/Eric-Song-Nop/gocire).
 
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
+## Setup
 
 ```bash
-yarn start
+pnpm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+The generator is expected at `../gocire` by default. Override it with
+`GOCIRE_DIR=/path/to/gocire` when needed.
+
+## Generate
+
+```bash
+pnpm run generate
+```
+
+Generated Astro files are written to `.gocire/site`.
 
 ## Build
 
 ```bash
-yarn build
+pnpm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+The static site is emitted to `.gocire/site/dist`.
 
-## Deployment
-
-Using SSH:
+## Local Development
 
 ```bash
-USE_SSH=true yarn deploy
+pnpm run dev
 ```
 
-Not using SSH:
+## Requirements
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- Go and the local `../gocire` checkout
+- `gopls`
+- `rust-analyzer`
+- Node.js and pnpm, which install `typescript-language-server`

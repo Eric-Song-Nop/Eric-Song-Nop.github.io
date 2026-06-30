@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "rs"
+name = "ericoolen-blog-code"
 version = "0.1.0"

@@ -1,7 +1,6 @@
 // # Simple but Powerful Pratt Parsing from Matklad
 //
-// This is a copy of [Simple but Powerful Pratt Parsing from Matklad's blog]
-// (https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html)
+// This is a copy of [Simple but Powerful Pratt Parsing from Matklad's blog](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html)
 // with no modifications to the parser logic.
 //
 // I am copying this blog because I love the original post, and because it shows

@@ -52,9 +52,9 @@ if (result.status !== 0) {
 await writeHomePage();
 
 async function writeHomePage() {
-  const navigationPath = join(siteDir, "src", "generated", "navigation.ts");
-  const navigation = await readFile(navigationPath, "utf8");
-  if (!navigation.includes(JSON.stringify(homeRedirectTarget))) {
+  const siteDataPath = join(siteDir, "src", "generated", "site-data.ts");
+  const siteData = await readFile(siteDataPath, "utf8");
+  if (!siteData.includes(JSON.stringify(homeRedirectTarget))) {
     throw new Error(`Generated navigation does not include homepage target: ${homeRedirectTarget}`);
   }
   const target = homeRedirectTarget;

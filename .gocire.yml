@@ -1,5 +1,7 @@
 site:
   title: Ericoolen
+  description: Source notes and essays by Eric Song.
+  url: https://eric-song-nop.github.io
 project:
   root: .
 content:
